@@ -6,4 +6,4 @@
 ##Here I use mongodb as DB
 ##This is a react app
 ##user can add multiple data based on the category
-##live site link: 
+##live site link: https://ema-jhn-simp.web.app/
