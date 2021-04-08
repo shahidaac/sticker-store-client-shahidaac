@@ -1,9 +1,9 @@
 import React, { useContext } from 'react';
 import { Route, Redirect } from 'react-router-dom';
-import { paintContext } from '../../App';
+import { stickerContext } from '../../App';
 
 const PrivateRoute = ({ children, ...rest }) => {
-    const [loggedInUser, setLoggedInUser] = useContext(paintContext);
+    const [loggedInUser, setLoggedInUser] = useContext(stickerContext);
     return (
         <Route
       {...rest}

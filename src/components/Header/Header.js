@@ -1,15 +1,15 @@
 import React, { useContext } from 'react';
 import { Container, Navbar, Nav } from 'react-bootstrap';
 import { Link } from "react-router-dom";
-import { paintContext } from '../../App';
+import { stickerContext } from '../../App';
 
 const Header = () => {
-    const [loggedInUser, setLoggedInUser] = useContext(paintContext)
+    const [loggedInUser, setLoggedInUser] = useContext(stickerContext)
     return (
         <div>
             <Container>
             <Navbar collapseOnSelect expand="lg">
-                <Navbar.Brand>Painting Precision</Navbar.Brand>
+                <Navbar.Brand>Trendy Stickers</Navbar.Brand>
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                 <Navbar.Collapse id="responsive-navbar-nav">
                     <Nav className="ml-auto">

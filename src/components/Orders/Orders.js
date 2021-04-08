@@ -1,49 +1,49 @@
 import React, { useState, useContext, useEffect } from 'react';
-import { paintContext } from '../../App';
+import { stickerContext } from '../../App';
 import Container from 'react-bootstrap/Container';
 import Table from 'react-bootstrap/Table';
 
 const Orders = () => {
-    const [loggedInUser, setLoggedInUser] = useContext(paintContext);
+    const [loggedInUser, setLoggedInUser] = useContext(stickerContext);
     const [orderedProducts, setOrderedProducts] = useState([]);
     useEffect(() => {
-        fetch('https://sheltered-fjord-53570.herokuapp.com/orders?email='+loggedInUser.email, {
-            method: 'GET',
-            headers: {
-                'Content-Type': 'application/json',
-            }
+        fetch(`https://ancient-reaches-18202.herokuapp.com/orders?email=` + loggedInUser.email, {
+          method: "GET",
+          headers: {
+            "Content-Type": "application/json",
+          },
         })
-        .then(res => res.json())
-        .then(data => setOrderedProducts(data))
+          .then((res) => res.json())
+          .then((data) => setOrderedProducts(data));
     } , [])
     return (
         <div className="orders">
-            <div className="page-header">
+            <div className="hero-header">
                 <h1>My Orders</h1>
             </div>
             <Container>
                 <div className="summary">
-                    <h4>Hello, {loggedInUser.name}</h4>
-                    <h6>Your Email Address: {loggedInUser.email}</h6>
-                    {/* <p>Total Order: {orderedProducts.length}</p> */}
+                    <h4>Hi, {loggedInUser.name}</h4>
+                    <h5>You are logged in with {loggedInUser.email}</h5>
+                    
                 </div>
                 <Table striped bordered hover>
                     <thead>
                         <tr>
                         <th>Ordered Date</th>
-                        <th>Product Name</th>
-                        <th>Weight</th>
+                        <th>Sticker Name</th>
+                        <th>Category</th>
                         <th>Price</th>
                         </tr>
                     </thead>
                     <tbody>
                 {
-                    orderedProducts.map(paint => 
+                    orderedProducts.map(sticker => 
                     <tr>
-                        <td>{paint.date}</td>
-                        <td>{paint.pName}</td>
-                        <td>{paint.weight}</td>
-                        <td>{paint.price}</td>
+                        <td>{sticker.date}</td>
+                        <td>{sticker.pName}</td>
+                        <td>{sticker.weight}</td>
+                        <td>{sticker.price}</td>
                     </tr>
                     )
                 }

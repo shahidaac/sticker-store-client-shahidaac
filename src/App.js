@@ -15,13 +15,13 @@ import EditProduct from './components/EditProduct/EditProduct';
 import AddProduct from './components/AddProduct/AddProduct';
 import Footer from './components/Footer/Footer';
 
-export const paintContext = createContext();
+export const stickerContext = createContext();
 
 function App() {
   const [loggedInUser, setLoggedInUser] = useState({});
   return (
-    <paintContext.Provider value={[loggedInUser, setLoggedInUser]}>
-    <div className="paint">
+    <stickerContext.Provider value={[loggedInUser, setLoggedInUser]}>
+    <div className="sticker">
       <Router>
         <Header></Header>
         <Switch>
@@ -56,7 +56,7 @@ function App() {
         <Footer></Footer>
     </Router>
     </div>
-    </paintContext.Provider>
+    </stickerContext.Provider>
   );
 }
 

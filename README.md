@@ -1,1 +1,3 @@
-"# fresh-valley-client-side-code" 
+"# sticker-store-client-view" 
+# sticker-store
+# sticker-store

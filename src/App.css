@@ -5,58 +5,58 @@
   font-size: 16px;
   font-weight: 600;
   padding: 0 15px;
-  color: #555;
+  color: #364547;
   text-transform: capitalize;
 }
 .navbar-light .navbar-brand {
-  font-weight: 700;
-  font-size: 32px;
-  color: #000;
+  font-weight: 750;
+  font-size: 30px;
+  color: #1b2021;
 }
 .card-bottom .btn {
-  background: #000;
-  border: 1px solid #000;
+  background: #53354a;
+  border: 1px solid #2b2e4a;
 }
 .card-bottom .btn:hover {
-  background: #fff;
-  color: #000;
+  background: #f8f5f1;
+  color: #2b2e4a;
 }
 .login {
-  border: 1px solid #ebdfdf;
+  border: 2px solid #f8f5f1;
   width: 500px;
   margin: 0 auto;
   padding: 50px;
   border-radius: 15px;
 }
 .login-btn{
-  border: 1px solid #ebdfdf;
+  border: 5px solid #ebdfdf;
   background-color: transparent;
-  padding: 5px 20px;
-  border-radius: 50px;
+  padding: 10px 25px;
+  border-radius: 40px;
   width: 100%;
-  margin-bottom: 10px;
+  margin-bottom: 25px;
   position: relative;
 }
 button.login-btn span {
   position: absolute;
-  left: 20px;
+  left: 90px;
 }
-/* Home page css */
+/* Home area  */
 .card {
-  padding-top: 30px;
+  padding-top: 40px;
   border: none;
-  border-radius: 10px;
+  border-radius: 15px;
   -webkit-box-shadow: 0px 20px 60px -30px rgb(0 0 0 / 45%);
     -moz-box-shadow: 0px 20px 60px -30px rgba(0,0,0,.45);
   box-shadow: 0px 20px 60px -30px rgb(0 0 0 / 45%);
   margin-bottom: 35px;
 }
 img.card-img-top {
-  width: 60%;
+  width: 75%;
   margin: 0 auto;
 }
 .card-title {
-  font-weight: 700;
+  font-weight: 750;
   text-transform: capitalize;
 }
 .card-bottom {
@@ -72,7 +72,7 @@ img.card-img-top {
   position: absolute;
   right: 10%;
 }
-/* order page css */
+/* order area  */
 .orders {
   padding: 50px;
 }
@@ -83,29 +83,33 @@ img.card-img-top {
   padding: 30px;
   margin-bottom: 70px;
 }
-.page-header{
+.hero-header{
   background:linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),url(./images/Bg.jpg);
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
-  color: #fff;
+  color: #f8f4e1;
   padding: 100px 0;
   margin-bottom: 100px;
 }
-.page-header h1 {
+.hero-header h1 {
   text-align: center;
-  font-weight: 700;
+  font-weight: 750;
+}
+.hero-header h2 {
+  text-align: center;
+  font-weight: 800;
 }
 .sidebar{
   -webkit-box-shadow: 0px 20px 60px -30px rgb(0 0 0 / 45%);
   -moz-box-shadow: 0px 20px 60px -30px rgba(0,0,0,.45);
   box-shadow: 0px 20px 60px -30px rgb(0 0 0 / 45%);
-  padding:30px;
+  padding:35px;
   margin-bottom: 60px;
 }
 .spinner-border {
   position: relative;
-  left: 50%;
+  left: 40%;
 }
 .sidebar ul li {
   cursor: pointer;
@@ -118,17 +122,17 @@ img.card-img-top {
   padding-right: 10px;
 }
 form {
-  border: 1px solid #ddd;
+  border: 1px solid #f8f4e1;
   border-radius: 15px;
   padding: 30px;
 }
 .footer{
   margin-top: 50px;
 }
-.footer p {
-  background-color: #000;
+.footer h4 {
+  background-color: #150e56;
   padding: 15px 0;
-  color: #fff;
+  color: #f8f4e1;
   text-align: center;
   font-size: 18px;
   font-weight: 600;
@@ -136,7 +140,7 @@ form {
 @media (min-width: 320px) and (max-width: 480px) {
   
   .login {
-    width: 100%;
+    width: 90%;
   }
   
 }

@@ -2,29 +2,31 @@ import React, { useState, useEffect } from 'react';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Spinner from 'react-bootstrap/Spinner';
-import Paint from '../Paint/Paint';
+import Sticker from '../Sticker/Sticker';
+
 
 const Home = () => {
-    const [paints, setPaints] = useState([]);
+    const [stickers, setStickers] = useState([]);
     useEffect(() => {
-        fetch('https://sheltered-fjord-53570.herokuapp.com/paints', {
-            method: 'GET',
-            headers: {
-                'Content-Type': 'application/json',
-            }
+        fetch(`https://ancient-reaches-18202.herokuapp.com/stickers`, {
+          method: "GET",
+          headers: {
+            "Content-Type": "application/json",
+          },
         })
-        .then(res => res.json())
-        .then(data => setPaints(data))
+          .then((res) => res.json())
+          .then((data) => setStickers(data));
     } , [])
     return (
         <div className="home-page">
             <Container>
                 <Row>
                     {
-                        paints.length === 0 && <Spinner animation="border" />                  
+                        stickers.length === 0 && <Spinner animation="border" variant="danger" />                  
                     }
                     {
-                    paints.map(paint => <Paint key={paint._id} paint={paint}></Paint>)
+                        stickers.map(sticker => <Sticker key={sticker._id} sticker={sticker}></Sticker>)
+                    
                     }
                 </Row>
             </Container>

@@ -3,9 +3,9 @@ import firebase from "firebase/app";
 import "firebase/auth";
 import firebaseConfig from './firebase.config';
 import { useHistory, useLocation } from 'react-router-dom';
-import { paintContext } from '../../App';
+import { stickerContext } from '../../App';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faGoogle } from '@fortawesome/free-brands-svg-icons';
+import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 
 if (!firebase.apps.length) {
     firebase.initializeApp(firebaseConfig);
@@ -15,7 +15,7 @@ if (!firebase.apps.length) {
 
 
 const Login = () => {
-    const [loggedInUser, setLoggedInUser] = useContext(paintContext);
+    const [loggedInUser, setLoggedInUser] = useContext(stickerContext);
 
     let history = useHistory();
     let location = useLocation();
@@ -35,12 +35,12 @@ const Login = () => {
     }
     return (
         <div>
-            <div className="page-header">
-                <h1>Login</h1>
+            <div className="hero-header">
+                <h1>Please login to continue</h1>
             </div>
             <div className="login">
-                <h5><strong>Create an account</strong></h5>
-                <button className="login-btn" onClick={handleSignWithGoogle}><span> <FontAwesomeIcon icon={faGoogle} /> </span>Continue with Google</button>
+                <h4>Create an account now</h4>
+                <button className="login-btn" onClick={handleSignWithGoogle}><span> <FontAwesomeIcon icon={faEnvelope} /> </span>Continue with Google</button>
             </div>
         </div>
     );
