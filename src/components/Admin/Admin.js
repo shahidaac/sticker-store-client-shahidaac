@@ -66,7 +66,7 @@ const Admin = () => {
   return (
     <div>
       <div className="hero-header">
-        <h1>Add Stickers</h1>
+        <h1>Add Stickers to homepage</h1>
       </div>
       <Container>
         <Row>
