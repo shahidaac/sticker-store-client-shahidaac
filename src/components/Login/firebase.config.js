@@ -1,10 +1,10 @@
 const firebaseConfig = {
-  apiKey: "AIzaSyBXKMiO8j5OllkAZ3DR60GsaTmW7Muuo0E",
-  authDomain: "metro-auth-nine.firebaseapp.com",
-  projectId: "metro-auth-nine",
-  storageBucket: "metro-auth-nine.appspot.com",
-  messagingSenderId: "245112388945",
-  appId: "1:245112388945:web:b7c6de1bc36c0613d7a770",
+  apiKey: "AIzaSyC-vWLf-TT2MwNXcgtlSDfEb_dqsn0LdqQ",
+  authDomain: "ema-jhn-simp.firebaseapp.com",
+  projectId: "ema-jhn-simp",
+  storageBucket: "ema-jhn-simp.appspot.com",
+  messagingSenderId: "774188912340",
+  appId: "1:774188912340:web:c5a045421348909b22f541",
 };
 
 export default firebaseConfig;
